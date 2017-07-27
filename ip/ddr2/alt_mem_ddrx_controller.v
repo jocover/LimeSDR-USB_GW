@@ -1007,8 +1007,8 @@ output  sideband_in_refresh;
     wire ctl_init_req                                                                        = ctl_sb_init_req;
     wire [CFG_MEM_IF_CLK_PAIR_COUNT            - 1 : 0] ctl_mem_clk_disable                  = ctl_sb_mem_clk_disable;
     wire [CFG_MEM_IF_DQS_WIDTH*CFG_MEM_IF_CHIP - 1 : 0] ctl_cal_byte_lane_sel_n              = 0;
-	wire [CFG_RRANK_BUS_WIDTH                  - 1 : 0] afi_rrank                = CFG_USE_SHADOW_REGS ? int_afi_rrank : 0;
-	wire [CFG_WRANK_BUS_WIDTH                  - 1 : 0] afi_wrank                = CFG_USE_SHADOW_REGS ? int_afi_wrank : 0;
+	wire [CFG_RRANK_BUS_WIDTH                  - 1 : 0] afi_rrank                = CFG_USE_SHADOW_REGS ? int_afi_rrank[CFG_RRANK_BUS_WIDTH - 1:0] : {CFG_RRANK_BUS_WIDTH{1'b0}};
+	wire [CFG_WRANK_BUS_WIDTH                  - 1 : 0] afi_wrank                = CFG_USE_SHADOW_REGS ? int_afi_wrank[CFG_WRANK_BUS_WIDTH - 1:0] : {CFG_RRANK_BUS_WIDTH{1'b0}};
     
     // Log 2 function
     function integer log2;

@@ -138,7 +138,6 @@ module alt_mem_ddrx_mm_st_converter # (
     reg                          avl_read_req_reg;
     reg                          avl_write_req_reg;
     reg   [AVL_SIZE_WIDTH-1:0]   avl_size_reg;
-    reg                          avl_burstbegin_reg;
     reg   [AVL_ADDR_WIDTH-1:0]   avl_addr_reg;
     reg   [AVL_DATA_WIDTH-1:0]   avl_wdata_reg;
     reg   [AVL_DATA_WIDTH/8-1:0] avl_be_reg;
@@ -161,7 +160,6 @@ module alt_mem_ddrx_mm_st_converter # (
                     avl_read_req_reg            <= 1'b0;
                     avl_write_req_reg           <= 1'b0;
                     avl_size_reg                <= {AVL_SIZE_WIDTH{1'b0}};
-                    avl_burstbegin_reg          <= 1'b0;
                     avl_addr_reg                <= {AVL_ADDR_WIDTH{1'b0}};
                     avl_wdata_reg               <= {AVL_DATA_WIDTH{1'b0}};
                     avl_be_reg                  <= {AVL_BE_WIDTH{1'b0}};
@@ -178,7 +176,6 @@ module alt_mem_ddrx_mm_st_converter # (
                         avl_read_req_reg        <= avl_read_req;
                         avl_write_req_reg       <= avl_write_req;
                         avl_size_reg            <= avl_size;
-                        avl_burstbegin_reg      <= avl_burstbegin;
                         avl_addr_reg            <= avl_addr;
                         avl_wdata_reg           <= avl_wdata;
                         avl_be_reg              <= avl_be;
@@ -198,7 +195,6 @@ module alt_mem_ddrx_mm_st_converter # (
                 avl_read_req_reg            = avl_read_req;
                 avl_write_req_reg           = avl_write_req;
                 avl_size_reg                = avl_size;
-                avl_burstbegin_reg          = avl_burstbegin;
                 avl_addr_reg                = avl_addr;
                 avl_wdata_reg               = avl_wdata;
                 avl_be_reg                  = avl_be;

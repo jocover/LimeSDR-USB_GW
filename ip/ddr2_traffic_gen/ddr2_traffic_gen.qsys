@@ -88,7 +88,7 @@
  <module
    name="mm_traffic_generator_0"
    kind="altera_avalon_mm_traffic_generator"
-   version="15.1"
+   version="17.0"
    enabled="1"
    autoexport="1">
   <parameter name="AUTO_DEVICE" value="EP4CE40F23C8" />

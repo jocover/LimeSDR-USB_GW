@@ -22,7 +22,7 @@
 --
 -- File         : ddr2_example_top_tb.vhd
 --
--- Revision     : V15.1
+-- Revision     : V17.0
 --
 -- Abstract:
 -- Automatically generated testbench for the example top level design to allow
@@ -63,7 +63,7 @@
 
 -- << END MEGAWIZARD INSERT PARAMETER_LIST
 ------------------------------------------------------------------------------------
--- << MEGAWIZARD PARSE FILE DDR15.1
+-- << MEGAWIZARD PARSE FILE DDR17.0
 
 
 
